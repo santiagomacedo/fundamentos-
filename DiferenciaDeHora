@@ -1,0 +1,42 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+ 
+int main()
+{
+	int h1,m1,s1,h2,m2,s2,t1,t2,t3,h3,m3,s3;
+
+	cout<<"ingrese la primer hora:"<<endl;
+	cin>>h1>>m1>>s1;
+
+	cout<<"ingrese la segunda hora:"<<endl;
+	cin>>h2>>m2>>s2;
+
+	t1=h1*3600+m1*60+s1;
+	t2=h2*3600+m2*60+s2;
+
+	if(t1!=t2)
+	{
+		if (t2<t1)
+		t3=t1-t2;
+		else 
+			if (t1<t2)
+			t3=t2-t1;
+	h3=t3/3600;
+	m3=(t3-(h3*3600))/60;
+	s3=t3-(m3*60)-(h3*3600);
+	cout<<"la diferencia de hora es"<<endl;
+	cout<<h3<<":"<<m3<<":"<<s3<<endl;
+	}
+	
+	else 
+	cout<<"los valores ingresados son iguiales"<<endl;
+
+	
+	getch();
+	return 0;
+}
+
+
