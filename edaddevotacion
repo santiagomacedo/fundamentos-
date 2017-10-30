@@ -12,9 +12,9 @@ void main ()
 {int a,x;
 cout<<"ingrese edad:";
 cin>>a;
-if (a>=10)
+if (a>=18)
     cout<<"usted puede votar";
 else 
-	cout<<"usted no puede vorar";
+	cout<<"usted no puede votar";
 getch();
 }
