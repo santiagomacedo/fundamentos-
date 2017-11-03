@@ -1,0 +1,32 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float tren( float d, float e);
+
+int main()
+{float x,y;
+cout<<"ingrese la distancia y los dias de estadia:"<<endl;
+cin>>x>>y;
+cout<<tren(x,y);
+getch()
+;
+return 0;
+}
+
+float tren( float d, float e)
+{
+	float p,q;
+	p=d*0.75;
+	q=p*(30/100);
+	if ((d>800)&&(e>7));
+	{p=p-q;}
+	return p;
+}
+
+
+
+
+
