@@ -1,0 +1,46 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+int prom( int a);
+int capi( int y);
+ int main()
+ {
+	int x;
+	cout<<"ingrese el numero de mienbros en la serie"<;
+	cin>>x;
+	cout<<"el promedio de la suma de los mienbros de la serie es:"<<endl;
+	cout<<prom(x);
+	getch();
+	return 0;
+ }
+int prom( int a)
+{
+	int b=2,c=0,d=0,n=0,z;
+	do
+	{
+		c=c+b;
+		b=b+2;
+		d=d+capi(c);
+		n=n+1;
+	}
+	while(n<=9);
+	z=c/a;
+	return z;
+}
+int capi( int y)
+{
+	int s=0,t;
+	do
+	{
+		t=y%10;
+		y=y/10;
+		s=(s*10)+t;
+	}
+	while(y!=0);
+	return s;
+}
+
+
+
