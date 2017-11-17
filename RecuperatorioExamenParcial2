@@ -144,3 +144,40 @@ int multiplo(int a,int b)
 
 
 
+
+
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float DeterminarPrecio(float distancia,float dias);
+
+int main()
+{
+	int a,b;
+	cout<<"ingrese la distancia y los dias de estadia"<<endl;
+	cin>>a>>b;
+	cout<<"la cantidad a pagar es: ";
+	cout<<DeterminarPrecio(a,b);
+	getch();
+	return 0;
+}
+
+
+float DeterminarPrecio(float distancia,float dias)
+{
+	float p,q;
+	p=distancia*0.75;
+	q=(p*30)/100;
+	if (distancia>800&&dias>7)
+	{p=p-q;}
+	return p;
+}
+
+
+
