@@ -1,0 +1,146 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+int fact(int y);
+float divi(float x,float n);
+
+int main()
+{
+	int a,b;
+	float pi=3.14;
+	cout<<"ingrese los valores de X y N respectivamente"<<endl;
+	cin>>a>>b;
+	cout<<"la suma de la serie es: ";
+	cout<<pi+divi(a,b);
+	getch();
+	return 0;
+}
+int fact(int y)
+{
+	int i=1,j=1;
+	do{
+		j=j*i;
+		i++;
+	}
+	while(i<y);
+	return j;
+}
+float divi(float x,float n)
+{
+	int o,m,i=1,j=1,k=1,s=0,b;
+	do{
+		o=pow(x,j);
+		m=fact(j+1);
+		b=o/m;
+		if(k%2!=0){b=b*-1;}
+		s=s+b;
+		i++;
+		k++;
+		j++;
+	}
+	while(i<=n);
+		return s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+
+using namespace std;
+int impar(int a);
+
+int main()
+{
+	int x;
+	cout<<"ingrese el numero"<<endl;
+	cin>>x;
+	cout<<"la suma de los digitos impares es: ";
+	cout<<impar(x);
+	getch();
+	return 0;
+}
+int impar(int a)
+{
+	int s=0,n;
+	do{
+		n=a%10;
+		if (n%2!=0)
+		{
+			s=s+n;
+		}
+		a=a/10;
+	}
+	while(a>0);
+	return s;
+}
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+
+using namespace std;
+int multiplo(int a,int b);
+
+int main()
+{
+	int x,y;
+	cout<<"ingrese los dos numeros"<<endl;
+	cin>>x>>y;
+	cout<<multiplo(x,y);
+	getch();
+	return 0;
+
+}
+int multiplo(int a,int b)
+{
+	int m,n,c;
+	if (a>b)
+	{
+		m=a;
+		n=b;
+	}
+	else 
+		if(b>a)
+	{
+		m=b;
+		n=a;
+	}
+	
+	if(m%n==0){c=1;}
+	else 
+	{c=0;}
+	return c;
+}
+
+
+
