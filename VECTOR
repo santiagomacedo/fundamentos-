@@ -1,0 +1,31 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+using namespace std;
+
+using namespace std;
+int main()
+{
+	int vector[MAX];
+	int t,m,i,p=0,n=0,c=0;
+	cout<<"ingrese el tamaño del vector"<<endl;
+	cin>>t;
+	
+	for(i=0;i<t;i++)
+	{
+		cout<<"ingrese el numero:"<<i<<" del vector"<<endl;
+		cin>>m;
+		vector[i]=m;
+	}
+	for(i=0;i<t;i++)
+	{
+		if (vector[i]>0){p++;}
+		if (vector[i]<0){n++;}
+		if (vector[i]==0){c++;}
+	}
+	cout<<"positivos"<<p<<endl<<"negativos"<<n<<endl<<"ceros"<<c<<endl;
+	getch ();
+	return 0;
+}
+
